@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="ProfileGroupShipping" Collapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAgAAAAAAIAAAQCAACAAIAAAECAAAAJAAAAAg=</HashCode>
+      <FileName>C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\lc3\d1cb1705\e5b0640\Sources_App_Code\profile.cdcab7d2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProfileGroupBilling">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAgAAAAAAIAAAQCAACAAIAAAECAAAAJAAAAAg=</HashCode>
+      <FileName>C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\lc3\d1cb1705\e5b0640\Sources_App_Code\profile.cdcab7d2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProfileCommon">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICBAAEAAgAAAAAAIAAAQCAACACIAAQECAAAAJAAAAAg=</HashCode>
+      <FileName>C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\lc3\d1cb1705\e5b0640\Sources_App_Code\profile.cdcab7d2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerceDataContext" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>OgkCD0JDQVDkOSKANgiAhRyAGOmAOCgFYSlUgoJxQBE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lc_BillingInfoTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgCNAVhQFAggIYUBEWC0JTmaJAAAECiEQKJCFAQAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="lc_WishList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAgAEABFAAAAEUIQCcAAABBiGABBAQiCQAAAACIUAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_Category" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAwiAgADAgEggQABQAEAIAQBiCBAQAIEgAQgBAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_ColorTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAABBAAAAAAAQAEAAAAhiCiJAAAACAEAgEAAAAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_CouponTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkQBADQBAggEAASAEIAFCDiDCACAAgAJQUIACAAIA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_Department" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAiCAIBAgEggAAAQAEAIQQBiCAAQAAEAAQABAAAAAQ=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_OrderDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAoUBglgQglgAQAQAeIIAJhiaCIDiClA5AEgAAJUAM=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_Order" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>5AAyABBBRQAsgAIQwEGAAQBByCCQAASDAAA0UIFCIAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_Product" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgojIgoBAQFuzIcpQiGAKBQJyjjAwAUngyUAAEBIAxA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_ProductCategory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgAAADAABAAAQAQIEAAABBiCAAAAIgAAAgAAAIQAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_ProductImage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAgABAIEgAEQAQAEBAABJiKAAFAAkAAQghAQIQAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_ProductInventory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAgAAgFAAABgAQAQAUQAAJhiCSIgAAhABAAgAAJQAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_Recommendation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HgBgAAADAAEggEQAYAMBAABBiKggBAA0gQQABJAY0AA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_RegionShippingTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAiAAABAAAAwAAAQAEAIAQBiCAAQAGEAAAAAAAAEAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_SellerTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgCAgJBABAAgBIQAUACEIRmCNAAAADgFAIBCEAQAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_ShippingInfoTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgCNAVhQFAggIYUBEWC0JTmaJAAAECiEQKJCFAQAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_ShippingRegion" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgACAJIAAAAAAAQAEAAAABiCACAAAAAAAIBAgQAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_SizeTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEgBEAABgAAAQCEAAAIBiCgAAAAgAAEAAEAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_StateTaxTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAiAAABAEAABAAAQAkAIAQFyCgAQAAAAAAAAAAQAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_DigitalProduct" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAEABAAAAAAQAYAEEAEBBiCAACAAwAAAABAAIQAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_Country" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAiYEKBgAEEAAAYTQMBIFTBiCQSUIAgACABQAARABg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_State" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiYABBAEAEAEAATAEAIBRBiSASQIQAAKADAAAQABg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="lc_ShoppingCart" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAQgBEABFQAAAAUAQiEIAABBiCABAAQmCQAAgAAJSAk=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GetAllProductsInCategoryResult" Collapsed="true">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABIAAAAQAgAAAAAgCAIAQIAAAAgAAkAQAAAAAIAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetProductRecommendationsResult" Collapsed="true">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAAQAgAAAAAgAAIAQAAAAAAAAEAQAAAAAIAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthorizePayment" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\PaymentProviders\AuthorizeNET\AuthorizePayment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.ImageResize" Collapsed="true">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAACABgAAAAADAIAAAGAAAAAEIhCAAAIgAEAEAAA=</HashCode>
+      <FileName>App_Code\ImageHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.LinqAdminAccess" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAABAABgAAAAAAAAAAAAAAQAAAQA=</HashCode>
+      <FileName>App_Code\LinqAdminAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.LinqInventoryAccess" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAEAAABAAACAAAAAAAA=</HashCode>
+      <FileName>App_Code\LinqInventoryAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.LinqOrderAccess">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAUEAABAAgAAAAAQQAAAAACAgAAAABAAQABAAAAA=</HashCode>
+      <FileName>App_Code\LinqOrderAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.LinqProductAccess">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAJogkCAAAJggEAEAAEQwAIAQAAgAAAEBAAOgCgCgM=</HashCode>
+      <FileName>App_Code\LinqProductAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.LinqShoppingCartAccess" Collapsed="true">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBIAJECAAAwUQFCAAIAAAKEAAAIAAAAAAAwICAAAAA=</HashCode>
+      <FileName>App_Code\LinqShoppingCartAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.DOSaleCompleteCS" Collapsed="true">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>App_Code\PaymentProviders\PayPal\Gateway\DOSaleComplete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.PayPalHelper" Collapsed="true">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAIAAACAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\PaymentProviders\PayPal\Standard\PayPalHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.PPIPN" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Ng1VgSgwgGfxAiAFFGUQGhT3AAwRQSyGIJAQoFhOFQw=</HashCode>
+      <FileName>App_Code\PaymentProviders\PayPal\Standard\PPIPN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinqCommerce.SectionConfigurationGroup" Collapsed="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAABAAACAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\SectionConfigurationGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Configuration.ConfigurationSection" Collapsed="true">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Data.Linq.DataContext" Collapsed="true">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

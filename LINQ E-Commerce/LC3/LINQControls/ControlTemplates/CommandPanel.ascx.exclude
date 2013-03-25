@@ -1,0 +1,21 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CommandPanel.ascx.cs" Inherits="LINQControls_ControlTemplates_CommandPanel" %>
+<asp:HyperLink ID="StoreAdminLink" runat="server"  Target="_blank" NavigateUrl="~/LINQControls/Admin/CatalogAdmin.aspx">Store Administration</asp:HyperLink>
+<br />
+Administer categories, departments and products.
+<br />
+<br />
+<asp:HyperLink ID="lc_OrdersAdminLink" runat="server" Target="_blank" NavigateUrl="~/LINQControls/Admin/lc_OrdersAdmin.aspx">lc_Order Administration</asp:HyperLink>
+<br />
+Administer lc_Orders and see information about the people lc_Ordering them.
+<br />
+<br />
+<asp:HyperLink ID="InventoryAdminLink" runat="server" Target="_blank" NavigateUrl="~/LINQControls/Admin/Inventory.aspx">Inventory Administration</asp:HyperLink>
+<br />
+Administer inventory and track products available and record lc_Orders of new products from distributor.
+<br />
+<br />
+<asp:HyperLink ID="ImportLink" runat="server"  Target="_blank" NavigateUrl="~/LINQControls/Admin/DataImport.aspx">Data Administration</asp:HyperLink>
+<br />
+Add data from Excel and XML to the products table.
+
+

@@ -1,0 +1,46 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/App_Master/BalloonShop.master" CodeFile="Adminlogin_.aspx.cs" Inherits="LINQControls_Admin_Adminlogin" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<div>
+        <table>
+            <tr>
+                <td>
+                    Admin Login
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <asp:Label ID="lblusername" runat="server" Text="User Name">
+                
+                </asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:TextBox id="txtusername" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <asp:Label ID="lblpassword" runat="server" Text="Password">
+                
+                </asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:TextBox id="txtpassword" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="btnlogin" runat="server" Text="Login />
+                </td>
+            </tr>
+        </table>
+    </div>
+</asp:Content>
+<body>
+</html>

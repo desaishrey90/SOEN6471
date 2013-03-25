@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BalloonShop" Class="LinqCommerceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=Manthan-PC;Initial Catalog=ASPNETDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BalloonShopConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.lc_BillingInfoTable" Member="lc_BillingInfoTables">
+    <Type Name="lc_BillingInfoTable">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prefix" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="lc_Order_lc_BillingInfoTable" Member="lc_Order" ThisKey="OrderID" OtherKey="OrderID" Type="lc_Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_WishList" Member="lc_WishLists">
+    <Type Name="lc_WishList">
+      <Column Name="WishListID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SizeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ColorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="lc_ColorTable_lc_WishList" Member="lc_ColorTable" ThisKey="ColorID" OtherKey="ColorID" Type="lc_ColorTable" IsForeignKey="true" />
+      <Association Name="lc_Product_lc_WishList" Member="lc_Product" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Product" IsForeignKey="true" />
+      <Association Name="lc_SizeTable_lc_WishList" Member="lc_SizeTable" ThisKey="SizeID" OtherKey="SizeID" Type="lc_SizeTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_Category" Member="lc_Categories">
+    <Type Name="lc_Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="lc_Category_lc_ProductCategory" Member="lc_ProductCategories" ThisKey="CategoryID" OtherKey="CategoryID" Type="lc_ProductCategory" />
+      <Association Name="lc_Department_lc_Category" Member="lc_Department" ThisKey="DepartmentID" OtherKey="DepartmentID" Type="lc_Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_ColorTable" Member="lc_ColorTables">
+    <Type Name="lc_ColorTable">
+      <Column Name="ColorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="lc_ColorTable_lc_WishList" Member="lc_WishLists" ThisKey="ColorID" OtherKey="ColorID" Type="lc_WishList" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_CouponTable" Member="lc_CouponTables">
+    <Type Name="lc_CouponTable">
+      <Column Name="CouponID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CouponName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CouponCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountPercent" Type="System.Decimal" DbType="Decimal(18,3) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpireDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateMade" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="lc_CouponTable_lc_CouponTable" Member="lc_CouponTable2" ThisKey="CouponID" OtherKey="CouponID" Type="lc_CouponTable" Cardinality="One" />
+      <Association Name="lc_CouponTable_lc_CouponTable" Member="lc_CouponTable1" ThisKey="CouponID" OtherKey="CouponID" Type="lc_CouponTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_Department" Member="lc_Departments">
+    <Type Name="lc_Department">
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="lc_Department_lc_Category" Member="lc_Categories" ThisKey="DepartmentID" OtherKey="DepartmentID" Type="lc_Category" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_OrderDetail" Member="lc_OrderDetails">
+    <Type Name="lc_OrderDetail">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UnitCost" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Subtotal" Type="System.Decimal" DbType="Money" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Size" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CouponCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SellerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tax" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="lc_Order_lc_OrderDetail" Member="lc_Order" ThisKey="OrderID" OtherKey="OrderID" Type="lc_Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_Orders" Member="lc_Orders">
+    <Type Name="lc_Order">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateShipped" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Canceled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="lc_Order_lc_BillingInfoTable" Member="lc_BillingInfoTable" ThisKey="OrderID" OtherKey="OrderID" Type="lc_BillingInfoTable" Cardinality="One" />
+      <Association Name="lc_Order_lc_OrderDetail" Member="lc_OrderDetails" ThisKey="OrderID" OtherKey="OrderID" Type="lc_OrderDetail" />
+      <Association Name="lc_Order_lc_ShippingInfoTable" Member="lc_ShippingInfoTable" ThisKey="OrderID" OtherKey="OrderID" Type="lc_ShippingInfoTable" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_Product" Member="lc_Products">
+    <Type Name="lc_Product">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5000) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Image1FileName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Image2FileName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OnCatalogPromotion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OnDepartmentPromotion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Sizeable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Colorable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TotalRemaining" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="lc_Product_lc_WishList" Member="lc_WishLists" ThisKey="ProductID" OtherKey="ProductID" Type="lc_WishList" />
+      <Association Name="lc_Product_lc_ProductCategory" Member="lc_ProductCategories" ThisKey="ProductID" OtherKey="ProductID" Type="lc_ProductCategory" />
+      <Association Name="lc_Product_lc_ProductImage" Member="lc_ProductImages" ThisKey="ProductID" OtherKey="ProductID" Type="lc_ProductImage" />
+      <Association Name="lc_Product_lc_ProductInventory" Member="lc_ProductInventories" ThisKey="ProductID" OtherKey="ProductID" Type="lc_ProductInventory" />
+      <Association Name="lc_Product_lc_Recommendation" Member="lc_Recommendations" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Recommendation" />
+      <Association Name="lc_Product_lc_DigitalProduct" Member="lc_DigitalProducts" ThisKey="ProductID" OtherKey="ProductID" Type="lc_DigitalProduct" />
+      <Association Name="lc_Product_lc_ShoppingCart" Member="lc_ShoppingCarts" ThisKey="ProductID" OtherKey="ProductID" Type="lc_ShoppingCart" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_ProductCategory" Member="lc_ProductCategories">
+    <Type Name="lc_ProductCategory">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="lc_Category_lc_ProductCategory" Member="lc_Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="lc_Category" IsForeignKey="true" />
+      <Association Name="lc_Product_lc_ProductCategory" Member="lc_Product" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_ProductImage" Member="lc_ProductImages">
+    <Type Name="lc_ProductImage">
+      <Column Name="ProductImageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="lc_Product_lc_ProductImage" Member="lc_Product" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Product" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_ProductInventory" Member="lc_ProductInventories">
+    <Type Name="lc_ProductInventory">
+      <Column Name="ProductInventoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Size" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SellerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="lc_Product_lc_ProductInventory" Member="lc_Product" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Product" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_Recommendation" Member="lc_Recommendations">
+    <Type Name="lc_Recommendation">
+      <Column Name="RecommendationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateInserted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="lc_Product_lc_Recommendation" Member="lc_Product" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_RegionShippingTable" Member="lc_RegionShippingTables">
+    <Type Name="lc_RegionShippingTable">
+      <Column Name="RegionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShippingCost" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_SellerTable" Member="lc_SellerTables">
+    <Type Name="lc_SellerTable">
+      <Column Name="SellerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SellerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Zip" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_ShippingInfoTable" Member="lc_ShippingInfoTables">
+    <Type Name="lc_ShippingInfoTable">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prefix" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="lc_Order_lc_ShippingInfoTable" Member="lc_Order" ThisKey="OrderID" OtherKey="OrderID" Type="lc_Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_ShippingRegion" Member="lc_ShippingRegions">
+    <Type Name="lc_ShippingRegion">
+      <Column Name="ShippingRegionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShippingRegion" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_SizeTable" Member="lc_SizeTables">
+    <Type Name="lc_SizeTable">
+      <Column Name="SizeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Size" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="lc_SizeTable_lc_WishList" Member="lc_WishLists" ThisKey="SizeID" OtherKey="SizeID" Type="lc_WishList" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_StateTaxTable" Member="lc_StateTaxTables">
+    <Type Name="lc_StateTaxTable">
+      <Column Name="StateTaxTableID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TaxPercent" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_DigitalProduct" Member="lc_DigitalProducts">
+    <Type Name="lc_DigitalProduct">
+      <Column Name="DigitalProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="lc_Product_lc_DigitalProduct" Member="lc_Product" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Product" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_Country" Member="lc_Countries">
+    <Type Name="lc_Country">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TwoCharCode" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="ThreeCharCode" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="NumCode" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="ShipTo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Published" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_State" Member="lc_States">
+    <Type Name="lc_State">
+      <Column Name="StateID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Abbreviation" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Published" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lc_ShoppingCart" Member="lc_ShoppingCarts">
+    <Type Name="lc_ShoppingCart">
+      <Column Name="CartID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SizeID" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ColorID" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="lc_Product_lc_ShoppingCart" Member="lc_Product" ThisKey="ProductID" OtherKey="ProductID" Type="lc_Product" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetAllProductsInCategory" Method="GetAllProductsInCategory">
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetAllProductsInCategoryResult">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5000) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Image1FileName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Image2FileName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OnCatalogPromotion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OnDepartmentPromotion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetProductRecommendations" Method="GetProductRecommendations">
+    <Parameter Name="ProductID" Parameter="productID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DescriptionLength" Parameter="descriptionLength" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetProductRecommendationsResult">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Image1FileName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5003)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
