@@ -90,7 +90,28 @@ namespace LinqCommerce
 
         }
 
-        
+        //LinqEcommerce
+        //SOEN-6471 - Milestone 4 change on 12/04/2013
+        //Replacing long parameter list to an object
+        //Modified by Abhinav Shah, Manthan Makwana, Mohnish Sethi, Niketh Jain and Shrey Desai
+        public void InsertBilling(ProfileGroupBilling Billing, int Order_ID)
+        {
+            LinqCommerceDataContext db = new LinqCommerceDataContext();
+
+            lc_BillingInfoTable bi = new lc_BillingInfoTable();
+            bi.FirstName = Billing.FirstName;
+            bi.LastName = Billing.LastName;
+            bi.MiddleName = Billing.MiddleName;
+            bi.NickName = Billing.NickName;
+            bi.OrderID = Order_ID;
+            bi.Phone = Billing.Phone;
+            bi.Prefix = Billing.Prefix;
+            bi.State = Billing.State;
+            bi.Zip = Billing.Zip;
+            db.lc_BillingInfoTables.InsertOnSubmit(bi);
+            db.SubmitChanges();
+
+        }
 
         /// <summary>
         /// Inserts a record into the shipping info table
