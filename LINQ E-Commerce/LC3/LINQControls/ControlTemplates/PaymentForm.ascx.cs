@@ -185,14 +185,6 @@ public partial class LINQControls_ControlTemplates_PaymentForm : System.Web.UI.U
         if (t)
         {
             
-            //lo.InsertBilling(BillFNTB.Text, BillLNTB.Text, BillMNTB.Text, "", lc_OrderID, 
-              //  BillPhoneTB.Text, BillPrefixCombo.Text, BillStateDropDown.Text, BillZipCodeTB.Text);
-            
-
-            //lo.InsertShipping(ShipFNTB.Text, ShipLNTB.Text, ShipMNTB.Text, "", lc_OrderID,
-              //  ShipPhoneTB.Text, ShipPrefixCombo.Text, ShipStateDropDown.Text, ShipZipCodeTB.Text);
-
-
             //LinqEcommerce
             //SOEN-6471 - Milestone 4 change on 12/04/2013
             //Replacing long parameter list to an object
