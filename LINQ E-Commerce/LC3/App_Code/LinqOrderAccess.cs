@@ -143,6 +143,28 @@ namespace LinqCommerce
 
         }
 
+        //LinqEcommerce
+        //SOEN-6471 - Milestone 4 change on 12/04/2013
+        //Replacing long parameter list to an object
+        //Modified by Abhinav Shah, Manthan Makwana, Mohnish Sethi, Niketh Jain and Shrey Desai
+        public void InsertShipping(ProfileGroupShipping Shipping, int OrderID)
+        {
+            LinqCommerceDataContext db = new LinqCommerceDataContext();
+            lc_ShippingInfoTable bi = new lc_ShippingInfoTable();
+            bi.FirstName = Shipping.FirstName;
+            bi.LastName = Shipping.LastName;
+            bi.MiddleName = Shipping.MiddleName;
+            bi.NickName = Shipping.NickName;
+            bi.OrderID = OrderID;
+            bi.Phone = Shipping.Phone;
+            bi.Prefix = Shipping.Prefix;
+            bi.State = Shipping.State;
+            bi.Zip = Shipping.Zip;
+            db.lc_ShippingInfoTables.InsertOnSubmit(bi);
+            db.SubmitChanges();
+
+        }
+
 
         
         /// <summary>

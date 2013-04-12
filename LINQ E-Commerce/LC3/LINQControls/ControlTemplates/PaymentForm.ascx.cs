@@ -189,8 +189,8 @@ public partial class LINQControls_ControlTemplates_PaymentForm : System.Web.UI.U
               //  BillPhoneTB.Text, BillPrefixCombo.Text, BillStateDropDown.Text, BillZipCodeTB.Text);
             
 
-            lo.InsertShipping(ShipFNTB.Text, ShipLNTB.Text, ShipMNTB.Text, "", lc_OrderID,
-                ShipPhoneTB.Text, ShipPrefixCombo.Text, ShipStateDropDown.Text, ShipZipCodeTB.Text);
+            //lo.InsertShipping(ShipFNTB.Text, ShipLNTB.Text, ShipMNTB.Text, "", lc_OrderID,
+              //  ShipPhoneTB.Text, ShipPrefixCombo.Text, ShipStateDropDown.Text, ShipZipCodeTB.Text);
 
 
             //LinqEcommerce
@@ -199,7 +199,7 @@ public partial class LINQControls_ControlTemplates_PaymentForm : System.Web.UI.U
             //Modified by Abhinav Shah, Manthan Makwana, Mohnish Sethi, Niketh Jain and Shrey Desai
             lo.InsertBilling(ProfileInfo.Billing, lc_OrderID);
 
-            //lo.InsertShipping(ProfileInfo.Shipping, lc_OrderID);
+            lo.InsertShipping(ProfileInfo.Shipping, lc_OrderID);
         }
         Redirect(message);
     }
