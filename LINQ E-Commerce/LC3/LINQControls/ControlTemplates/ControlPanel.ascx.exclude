@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ControlPanel.ascx.cs" Inherits="LINQControls_ControlTemplates_ControlPanel" %>

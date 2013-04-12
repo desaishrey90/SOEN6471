@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Telerik.Web;
+
+public partial class LINQControls_ControlTemplates_CommandPanel : System.Web.UI.UserControl, ICommandPanel
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    #region ICommandPanel Members
+    public IControlPanel ControlPanel
+    {
+        get { throw new NotImplementedException(); }
+    }
+    public string Name
+    {
+        get { return "E-Commerce"; }
+    }
+    public void Refresh()
+    {
+        throw new NotImplementedException();
+    }
+    public string Title
+    {
+        get { return "E-Commerce"; }
+    }
+    #endregion
+}

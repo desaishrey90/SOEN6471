@@ -1,0 +1,221 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.ComponentModel;
+
+public partial class LINQControls_ControlTemplates_CreateAllSitefinityECommPages : System.Web.UI.UserControl
+{
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void createPagesbutton_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            //Create the Shopping Cart page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage = cmsManager.CreatePage("ShoppingCart");
+            newPage.Name = "ShoppingCart";
+            newPage.MenuName = "Shopping Cart";
+            newPage.Title = "Shopping Cart";
+            newPage.Description = "This is the shopping cart page.";
+            newPage.Navigable = true;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager.SavePage(newPage);
+
+            //Create the Catalog page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager2 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage2 = cmsManager.CreatePage("Catalog");
+            newPage2.Name = "Catalog";
+            newPage2.MenuName = "Catalog";
+            newPage2.Title = "Catalog";
+            newPage2.Description = "This is the catalog page";
+            newPage2.Navigable = true;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager2.SavePage(newPage2);
+
+            //Create the Product page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager3 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage3 = cmsManager3.CreatePage("Product");
+            newPage3.Name = "Product";
+            newPage3.MenuName = "Product";
+            newPage3.Title = "Product";
+            newPage3.Description = "This is the product page.";
+            newPage3.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager3.SavePage(newPage3);
+
+            //Create the Insert Review page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager4 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage4 = cmsManager4.CreatePage("InsertReview");
+            newPage4.Name = "Insert Review";
+            newPage4.MenuName = "Insert Review";
+            newPage4.Title = "Insert Review";
+            newPage4.Description = "This is the Insert Review page.";
+            newPage4.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager4.SavePage(newPage4);
+
+            //Create the View Recommendations page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager5 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage5 = cmsManager5.CreatePage("ViewRecommendations");
+            newPage5.Name = "View Recommendations";
+            newPage5.MenuName = "View Recommendations";
+            newPage5.Title = "View Recommendations";
+            newPage5.Description = "This is the View Recommendations page.";
+            newPage5.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager5.SavePage(newPage5);
+
+            //Create the Edit My Billing and Shipping Info page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager6 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage6 = cmsManager6.CreatePage("EditBillingShipping");
+            newPage6.Name = "Edit My Billing and Shipping Info";
+            newPage6.MenuName = "Edit My Billing and Shipping Info";
+            newPage6.Title = "Edit My Billing and Shipping Info";
+            newPage6.Description = "This is the Edit My Billing and Shipping Info page.";
+            newPage6.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager6.SavePage(newPage6);
+
+            //Create the Edit My Profile page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager7 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage7 = cmsManager7.CreatePage("EditMyProfile");
+            newPage7.Name = "Edit My Profile";
+            newPage7.MenuName = "Edit My Profile";
+            newPage7.Title = "Edit My Profile";
+            newPage7.Description = "This is the Edit My Profile page.";
+            newPage7.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager7.SavePage(newPage7);
+
+            //Create the Login Page page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager8 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage8 = cmsManager8.CreatePage("LoginPage");
+            newPage8.Name = "Login Page";
+            newPage8.MenuName = "Login Page";
+            newPage8.Title = "Login Page";
+            newPage8.Description = "This is the Login page.";
+            newPage8.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager8.SavePage(newPage8);
+
+            //Create the lc_Order History page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager9 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage9 = cmsManager9.CreatePage("lc_OrderHistory");
+            newPage9.Name = "lc_Order History";
+            newPage9.MenuName = "lc_Order History";
+            newPage9.Title = "lc_Order History";
+            newPage9.Description = "This is the lc_Order History.";
+            newPage9.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager9.SavePage(newPage9);
+
+            //Create the Password Page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager10 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage10 = cmsManager10.CreatePage("PasswordPage");
+            newPage10.Name = "Password Page";
+            newPage10.MenuName = "Password Page";
+            newPage10.Title = "Password Page";
+            newPage10.Description = "This is the Password Page.";
+            newPage10.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager10.SavePage(newPage10);
+
+            //Create the Receipt Page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager11 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage11 = cmsManager11.CreatePage("ReceiptPage");
+            newPage11.Name = "Receipt Page";
+            newPage11.MenuName = "Receipt Page";
+            newPage11.Title = "Receipt Page";
+            newPage11.Description = "This is the Receipt Page.";
+            newPage11.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager11.SavePage(newPage11);
+
+            //Create the Checkout
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager12 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage12 = cmsManager12.CreatePage("Checkout");
+            newPage12.Name = "Checkout";
+            newPage12.MenuName = "Checkout";
+            newPage12.Title = "Checkout";
+            newPage12.Description = "This is the Checkout.";
+            newPage12.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager12.SavePage(newPage12);
+
+            //Create the Password Page
+            // create a new instance of CmsManager with default provider
+            Telerik.Cms.CmsManager cmsManager13 = new Telerik.Cms.CmsManager();
+            // create a new page with specified title
+            Telerik.Cms.ICmsPage newPage13 = cmsManager13.CreatePage("Password");
+            newPage13.Name = "Password";
+            newPage13.MenuName = "Password";
+            newPage13.Title = "Password";
+            newPage13.Description = "This is the Password.";
+            newPage13.Navigable = false;
+            // optionally, we can modify the properties of new page at this
+            // place, before actually saving the page
+            // created page finally needs to be saved with cmsManager
+            cmsManager13.SavePage(newPage13);
+        }
+        catch (Exception ex)
+        {
+            Label1.Text = ex.Message.ToString();
+        }
+    }
+   
+}

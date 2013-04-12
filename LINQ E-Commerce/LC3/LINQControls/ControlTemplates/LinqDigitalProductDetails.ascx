@@ -1,0 +1,4 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LinqDigitalProductDetails.ascx.cs" Inherits="LINQControls_ControlTemplates_LinqDigitalProductDetails" %>
+<%@ Register Assembly="GCheckout" Namespace="GCheckout.Checkout" TagPrefix="cc1" %>
+<p>This product is available for electronic download. Please click the Google Checkout button below. Then, checkout with their cart. You will get an e-mail with product download instructions, which will also be available after your credit card is charged in the cart.</p>
+<cc1:GCheckoutButton ID="GCheckoutButton1" runat="server" OnClick="GCheckoutButton1_Click" />

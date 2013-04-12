@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LinqCommerce.SectionConfigurationGroup">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="LinqCommerce.SectionConfigurationGroup.PayPalElement" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>App_Code\SectionConfigurationGroup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="LinqCommerce.SectionConfigurationGroup.ProductSettingsElement" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>App_Code\SectionConfigurationGroup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="LinqCommerce.SectionConfigurationGroup.ShoppingCartSettingsElement" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>App_Code\SectionConfigurationGroup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="LinqCommerce.SectionConfigurationGroup.AuthorizeNETElement">
+        <Compartments>
+          <Compartment Name="Properties" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>App_Code\SectionConfigurationGroup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAABAAACAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\SectionConfigurationGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
