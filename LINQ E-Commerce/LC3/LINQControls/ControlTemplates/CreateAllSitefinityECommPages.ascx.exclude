@@ -1,6 +1,0 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CreateAllSitefinityECommPages.ascx.cs" Inherits="LINQControls_ControlTemplates_CreateAllSitefinityECommPages" %>
-<asp:Button ID="createPagesbutton" runat="server" 
-    Text="Create All E-Commerce Pages" onclick="createPagesbutton_Click" />
-    <br />
-    <br />
-    <asp:Label ID="Label1" runat="server"></asp:Label>
